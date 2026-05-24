@@ -1,0 +1,11 @@
+<ol>
+  <% @members.each do |member| %>
+    <li><%= member.capitalize %></li>
+  <% end %>
+</ol>
+
+<form action="/contact" method="get">
+  <label for="member">Who are you looking for?</label>
+  <input type="text" id="member" name="member" value="<%= params[:member] %>" placeholder="e.g. John Smith">
+  <input type="submit" value="Search">
+</form>
